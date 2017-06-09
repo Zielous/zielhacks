@@ -1,0 +1,46 @@
+/*
+    https://github.com/zielous/qc-css
+    v1.0 | 20170609
+    License: none (public domain)
+
+    This style sheet is designed to provide easy visual indicators while building your HTML, complimenting the use of DevTools
+
+    Load me AFTER any reset.css but BEFORE any other CSS files
+
+*/
+
+.qc-white {
+  border: 1px solid white;
+}
+
+.qc-black {
+  border: 1px solid black;
+}
+
+.qc--red {
+  border: 1px solid red;
+}
+
+.qc--pink {
+  border: 1px solid pink;
+}
+
+.qc--blue {
+  border: 1px solid yellow;
+}
+
+.qc--green {
+  border: 1px solid green;
+}
+
+.qc--yellow {
+  border: 1px solid yellow;
+}
+
+img {
+  border: 1px dashed blue;
+}
+
+li {
+  border: 1px dashed green;
+}
