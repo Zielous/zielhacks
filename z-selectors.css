@@ -1,7 +1,7 @@
 /******
 
     https://github.com/zielous/zielhacks
-    v1.0 | 20170610
+    v1.1 | 20170612
     License: None (public domain)
 
     --- ABOUT
@@ -53,24 +53,39 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     width: 100%;
   }
 
   .container--full-screen-width {
+    /*
+    *
+    * In HTML, apply this on parent containers which need to
+    * stretch to full width of screen
+    *
+    * Also use this for div background-images
+    *
+    * Use on divs which are parents of .container--limit-screen-width
+    *
+    */
+
     width: 100%;
   }
 
   .container--limit-screen-width {
     /*
     *
-    * In HTML, apply this on parent containers which need to
-    * stretch to full width of screen
+    * Change value below (in primary css file) to provide
+    * an easy margin left and right horizontal
     *
-    * Change value below to provide a global margin on left and right
-    * Also modify via media queries - great for site containers with banner overflow effects
+    * Also modify via media queries - great for site containers
+    * with banner overflow effects
+    *
+    * Use on divs which are children of .container--full-screen-width
     *
     */
-    width: 100%;
+
+    width: 80%; /* defaults to some nice padding and to visually distinguish */
   }
 
 

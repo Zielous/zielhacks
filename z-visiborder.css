@@ -1,7 +1,7 @@
 /******
 
     https://github.com/zielous/zielhacks
-    v1.5 | 20170610
+    v1.6 | 20170612
     License: None (public domain)
 
     --- ABOUT
@@ -12,11 +12,20 @@
 
     Comment out any elements below which you don't want to see highlighted
 
-    In your HTML, use the classes vb1, vb2, and vb3 to highlight specific elements
-
     Once you are done, comment out the link to this file from your head so you can re-use it again when needed later
 
 ******/
+
+/*----------*\
+#BACKGROUND
+\*----------*/
+
+/**
+*
+* Helps to see non-transparent images / elements that
+* are the same color as *the background
+*
+*/
 
 html {
   background: repeating-linear-gradient(
@@ -26,6 +35,21 @@ html {
   lightgray 5px,
   lightgray 10px);
 }
+
+
+
+
+
+/*----------*\
+#AUTOMATIC-BORDERS
+\*----------*/
+
+/**
+*
+* Helps to see non-transparent images / elements that
+* are the same color as *the background
+*
+*/
 
 div, nav, section, article, footer {
   outline: 1px solid red;
@@ -48,14 +72,30 @@ li {
   outline: 2px dashed yellow;
 }
 
+
+
+
+
+/*----------*\
+#MANUAL-BORDERS
+\*----------*/
+
+/**
+*
+* In your HTML, use the classes vb1, vb2, and vb3
+* to highlight specific elements. Hence why they
+* are Border instead of Outline
+*
+**/
+
 .vb1 {
-  border: 2px solid aqua;
+  border: 2px solid blue;
 }
 
 .vb2 {
-  border: 2px solid fuchsia;
+  border: 2px solid yellow;
 }
 
 .vb3 {
-  border: 2px solid blue;
+  border: 2px solid green;
 }
