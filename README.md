@@ -8,7 +8,7 @@
 
 A set of files to quickly setup your projects which includes useful common resources.
 
-Copy or clone this repo, and make sure to change this README file.
+**Instructions:** Copy or clone this repo, and make sure to create a file called *gitignore* (or any name you prefer - just update the .gitignore as well).
 
 
 
