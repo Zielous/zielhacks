@@ -1,8 +1,6 @@
 # ZielHacks
 
----
-
-#### About
+## About
 
 > https://github.com/zielous/zielhacks
 > v1.0 | 20170616
