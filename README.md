@@ -1,4 +1,4 @@
-# Untitled_Project
+# ZielHacks
 
 ---
 
@@ -28,7 +28,7 @@ Copy or clone this repo, and make sure to change this README file.
 
 1. **index.html:** Contains the following:
   - Basic structure
-  - Link to all CSS files below
+  - Links to all CSS files below
   - Viewport to ensure media query simulation works
 
 
