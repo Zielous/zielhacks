@@ -1,0 +1,181 @@
+/******
+
+    https://github.com/zielous/zielhacks
+    License: None (public domain)
+
+    --- ABOUT
+
+    This style sheet is designed to provide foundational common css selectors
+
+    --- INSTRUCTIONS
+
+    Load me immediately AFTER z-style.css
+    You MUST use this in conjunction with z-scaffold.css
+
+    --- TABLE OF CONTENTS
+
+    #custom-fonts
+    #global
+    #branding-colors
+    #capitalisation
+    #header-section
+    #main-section
+    #footer-section
+    #responsive-designs
+
+******/
+
+/*----------*\
+#CUSTOM-FONTS
+\*----------*/
+
+@font-face {
+
+}
+
+
+
+
+/*----------*\
+#GLOBAL
+\*----------*/
+
+  html {
+    font-family: "Helvetica", sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+
+
+
+
+/*----------*\
+#BRANDING-COLORS
+\*----------*/
+
+  .color__primary, {
+    /* define website's primary color here for reference */
+    color: pink;
+  }
+
+    .color__primary--bg {
+      background-color: pink;
+    }
+
+
+
+  .color__secondary, {
+    /* define website's secondary color here for reference */
+    color: blue;
+  }
+
+    .color__secondary--bg {
+      background-color: blue;
+    }
+
+
+
+
+
+/*----------*\
+#CAPITALISATION
+\*----------*/
+
+  .caps__lower {
+    /* Everything not capitalised */
+  }
+
+  .caps__upper {
+    /* Everything capitalised */
+  }
+
+  .caps__first {
+    /* Capitalise first letter of each word */
+  }
+
+  .caps__none {
+    /* Reset to original text as per HTML */
+  }
+
+  .caps__inherit {
+    /* Copy parent capitalisation */
+  }
+
+
+
+
+
+/*----------*\
+#HEADER-SECTION
+\*----------*/
+
+  .header {
+  }
+
+    .header--float {
+      /* floating header nav bar, z-index default 20 */
+      background-color: grey; /* change this to preferred color */
+    }
+
+      .header--below {
+        /* everything else below floating header nav bar */
+        padding-top: 1.5rem; /* change to at least height of nav bar */
+        max-width: 50em; /* change to preferred width */
+
+      }
+
+    .header__nav {
+
+    }
+
+  .logo__img {
+  }
+
+
+
+
+/*----------*\
+#HEADER-SECTION
+\*----------*/
+
+main {
+
+}
+
+
+
+/*----------*\
+#FOOTER-SECTION
+\*----------*/
+
+  .copyright {
+  }
+
+    .copyright--bg {
+    }
+
+    .copyright__logo {
+    }
+
+
+
+
+
+/*----------*\
+#RESPONSIVE-DESIGNS
+\*----------*/
+
+  @media only screen
+    and (min-width: 470px) {
+    /* Selectors for tablet screens and bigger */
+
+  }
+
+
+
+@media only screen
+  and (min-width: 1024px) {
+  /* Selectors for desktop screens and bigger */
+
+}

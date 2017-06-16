@@ -1,14 +1,24 @@
 /******
 
     https://github.com/zielous/zielhacks
-    v1.1 | 20170612
     License: None (public domain)
 
     --- ABOUT
+
     This style sheet is designed to provide foundational common css selectors
 
     --- INSTRUCTIONS
-    Load me AFTER any reset.css but BEFORE any other CSS files
+
+    Load me AFTER reset.css but BEFORE z-style.css
+    You MUST use this in conjunction with z-style.css
+
+    Ideally contents of this file shouldn't be touched (as it's meant to be a scaffold, and instead built upon/edited via other stylesheets)
+
+    --- TABLE OF CONTENTS
+
+    #capitalisation
+    #containers
+    #responsive-visibility
 
 ******/
 
@@ -37,9 +47,9 @@
   /**
   *
   * Designed to be used to quickly build up your HTML basic layout structure
-  * Use with visiborder.css to help visualise
+  * Use with z-visiborder.css to help visualise
   *
-  * Style containers separately with other selectors
+  * Style containers separately in other css files
   *
   **/
 
@@ -49,7 +59,12 @@
     width: 100%;
   }
 
-  .container__flex {
+  .container__flex,
+  div,
+  span,
+  header,
+  nav,
+  footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,35 +72,19 @@
     width: 100%;
   }
 
-  .container--full-screen-width {
-    /*
-    *
-    * In HTML, apply this on parent containers which need to
-    * stretch to full width of screen
-    *
-    * Also use this for div background-images
-    *
-    * Use on divs which are parents of .container--limit-screen-width
-    *
-    */
-
-    width: 100%;
+  .header--float {
+    /* floating nav bar */
+    position: fixed;
+    z-index: 20;
   }
 
-  .container--limit-screen-width {
-    /*
-    *
-    * Change value below (in primary css file) to provide
-    * an easy margin left and right horizontal
-    *
-    * Also modify via media queries - great for site containers
-    * with banner overflow effects
-    *
-    * Use on divs which are children of .container--full-screen-width
-    *
-    */
-
-    width: 80%; /* defaults to some nice padding and to visually distinguish */
+  .header--below {
+    /* everything below the floating nav bar */
+    position: relative;
+    margin: 0 auto;
+    max-width: 50em; /* default fallback width */
+    display: block;
+    text-align: center;
   }
 
 
@@ -101,31 +100,33 @@
   * Initial setup for visibility selectors
   * Combine multiple classes in HTML to be visible across multiple screen sizes
   *
+  * Selectors below define initial visibility
+  *
   **/
 
-  .visible__mobile {
+  .display__mobile {
     /* Only display for mobile */
-    display: block;
+    display: flex;
   }
 
-  .visible__mobile-tablet {
+  .display__mobile-tablet {
     /* Only display for mobile and tablet */
-    display: block;
+    display: flex;
   }
 
-  .visible__tablet {
+  .display__tablet {
     /* Only display for tablet */
-    display: block;
+    display: flex;
   }
 
-  .visible__tablet-desktop {
+  .display__tablet-desktop {
     /* Only display for tablet and desktop */
-    display: block;
+    display: flex;
   }
 
-  .visible__desktop {
+  .display__desktop {
     /* Only display for desktop and larger screens */
-    display: block;
+    display: flex;
   }
 
 
@@ -136,6 +137,13 @@
 #VISIBILITY-IN-MEDIA-QUERIES
 \*----------*/
 
+/**
+*
+* Mobile first philosophy, so break points
+* are designed for going to bigger screens
+*
+**/
+
   @media only screen
     and (max-width: 470px) {
     /* Selectors for mobile screens only */
@@ -145,27 +153,27 @@
     * These selectors show/hide the elements based on detected screen size
     **/
 
-      .visible__mobile {
+      .display__mobile {
         /* Only display for mobile */
         display: initial;
       }
 
-      .visible__mobile-tablet {
+      .display__mobile-tablet {
         /* Only display for mobile and tablet */
         display: initial;
       }
 
-      .visible__tablet {
+      .display__tablet {
         /* Only display for tablet */
         display: none;
       }
 
-      .visible__tablet-desktop {
+      .display__tablet-desktop {
         /* Only display for tablet and desktop */
         display: none;
       }
 
-      .visible__desktop {
+      .display__desktop {
         /* Only display for desktop and larger screens */
         display: none;
       }
@@ -177,31 +185,33 @@
     /* Selectors for tablet screens only */
 
     /**
+    *
     * Selective visiblity
     * These selectors show/hide the elements based on detected screen size
+    *
     **/
 
-      .visible__mobile {
+      .display__mobile {
         /* Only display for mobile */
         display: none;
       }
 
-      .visible__mobile-tablet {
+      .display__mobile-tablet {
         /* Only display for mobile and tablet */
         display: initial;
       }
 
-      .visible__tablet {
+      .display__tablet {
         /* Only display for tablet */
         display: initial;
       }
 
-      .visible__tablet-desktop {
+      .display__tablet-desktop {
         /* Only display for tablet and desktop */
         display: initial;
       }
 
-      .visible__desktop {
+      .display__desktop {
         /* Only display for desktop and larger screens */
         display: none;
       }
@@ -214,31 +224,33 @@
     /* Selectors for desktop and larger screens */
 
     /**
+    *
     * Selective visiblity
     * These selectors show/hide the elements based on detected screen size
+    *
     **/
 
-      .visible__mobile {
+      .display__mobile {
         /* Only display for mobile */
         display: none;
       }
 
-      .visible__mobile-tablet {
+      .display__mobile-tablet {
         /* Only display for mobile and tablet */
         display: none;
       }
 
-      .visible__tablet {
+      .display__tablet {
         /* Only display for tablet */
         display: none;
       }
 
-      .visible__tablet-desktop {
+      .display__tablet-desktop {
         /* Only display for tablet and desktop */
         display: initial;
       }
 
-      .visible__desktop {
+      .display__desktop {
         /* Only display for desktop and larger screens */
         display: initial;
       }

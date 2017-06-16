@@ -1,18 +1,25 @@
 /******
 
     https://github.com/zielous/zielhacks
-    v1.6 | 20170612
     License: None (public domain)
 
     --- ABOUT
+
     This style sheet is designed to provide easy visual indicators while building your HTML, complimenting the use of DevTools
 
     --- INSTRUCTIONS
+
     Load me AFTER any reset.css but BEFORE any other CSS files
 
     Comment out any elements below which you don't want to see highlighted
 
     Once you are done, comment out the link to this file from your head so you can re-use it again when needed later
+
+    --- TABLE OF CONTENTS
+
+    #background
+    #automatic-borders
+    #manual-borders
 
 ******/
 
@@ -29,7 +36,7 @@
 
 html {
   background: repeating-linear-gradient(
-  40deg,
+  47deg,
   whitesmoke,
   whitesmoke 5px,
   lightgray 5px,
@@ -68,8 +75,8 @@ img {
 }
 
 
-li {
-  outline: 2px dashed yellow;
+ul, li {
+  outline: 2px dashed pink;
 }
 
 
